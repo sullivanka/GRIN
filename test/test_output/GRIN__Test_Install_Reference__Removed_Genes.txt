@@ -1,0 +1,5 @@
+setid	left_out	rank	weight	set
+Random	ENSG00000151577	15890	1	Removed
+Random	ENSG00000213717	35393	1	Removed
+Random	ENSG00000279534	38699	1	Removed
+Random	ENSG00000236166	39791	1	Removed
