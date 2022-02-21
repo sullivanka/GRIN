@@ -34,9 +34,12 @@ A command line script to filter gene sets using biological networks. This tool b
   `(base) $ conda activate GRIN`
 2. Run `testGRIN.sh`:
   `(GRIN) $ source GRIN.sh`
-3. Upon successful running of GRIN, the following output will be printed to console:
-`Testing `
-`GRIN Installation successful:  `
+3. Upon successful running of GRIN, the test script will run GRIN followed by the following output printed to console:
+```
+GRIN Installation successful!
+Removing test files...
+Installation test complete.
+```
     
 ## Running GRIN
 1. Ensure your input files are in 2 tab-separated columns. The first column corresponds to the user-defined gene set name, and the second column corresponds to the gene ID for the gene of interest. NOTE: this gene ID MUST match the gene IDs used in the multiplex network. See example file in `test/TestGenes.txt`.
