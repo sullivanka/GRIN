@@ -25,7 +25,7 @@ parse_arguments <- function() {
                 default=0.7,
                 type='numeric',
                 help="set the restart parameter. Higher value means the walker will jump back to a seed node more often. default [default %default]"),
-    make_option("-t", "--tau",
+    make_option(c("-t", "--tau"),
                 action="store",
                 default="1.0",
                 help="comma-separated list of values between that MUST add up to the number of network layers in the .Rdata file.\n 
