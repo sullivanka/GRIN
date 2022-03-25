@@ -261,7 +261,7 @@ nullDist <- function(geneset, adjnorm, mpo, restart = 0.7, tau = 1, name = NULL,
   }
   
   # Bind columns for all null gene ranks
-  nullRanks <- dplyr::bind_cols(nullRanks, .name_repair = "unique")
+  nullRanks <- dplyr::bind_cols(nullRanks,.name_repair = ~ vctrs::vec_as_names(..., repair = "unique", quiet = TRUE))
   
   # Take median of ranks to generate null distribution
   nullRanks <- nullRanks %>% rowwise() %>%
