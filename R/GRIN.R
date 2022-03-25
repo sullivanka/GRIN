@@ -139,10 +139,18 @@ load_geneset = function(path, nw.mpo=NULL, opt=NULL) {
 get_or_set_tau = function(nw.mpo, opt) {
   # Ensure Tau param is appropriate (must be one value per layer, and must add up to NumLayers).
   tau <- as.numeric(unlist(strsplit(opt$tau, split=",")))
+  
+  # If arguments not passed, set all tau layers to equivalent values
+  if(tau == 1) {
+    tau <- rep(1, nw.mpo$Number_of_Layers)
+    return(tau)
+  }
+  
+  # If tau layers do not add up together, set all tau layers to equivalent values
   if (sum(tau) != nw.mpo$Number_of_Layers || length(tau)!=nw.mpo$Number_of_Layers) {
     message(sprintf("WARNING:: Your comma-delimited tau parameter values do not add up to the number of network layers: %s", opt$tau))
     tau <- rep(1, nw.mpo$Number_of_Layers)
-    message("WARNING:: Automatically re-setting tau = ", appendLF=FALSE)
+    message("Automatically re-setting tau = ", appendLF=FALSE)
     print(tau)
   }
   return(tau)
@@ -412,7 +420,7 @@ main <- function() {
 
   ranks <- left_join(ranks, geneset, by = c("left_out"="gene"))
   ranks <- ranks %>% dplyr::relocate(setid, .before = left_out) %>%
-    dplyr::mutate(rank_position = 0)
+    dplyr::mutate(rank_position = 0) %>% dplyr::rename(gene_symbol = left_out)
   # Add rank position next to each gene from input gene set
   for (i in 1:(nrow(geneset))) ranks$rank_position[i] <- i
   
