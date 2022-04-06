@@ -45,6 +45,7 @@ Installation test complete.
 
 Example command line arguments:
 ` (GRIN) $ Rscript $GRIN_DIR/R/GRIN.R -d $GRIN_DIR/test/suicide_weighted_Multiplex_0.5Delta.RData -g $GRIN_DIR/test/TestGenes.txt -r 0.7 -m Test_Install_User --tau 1,1,1,1,1,1,1,1,1,1 -o $GRIN_DIR/test/test_output `
+
 4. Flags to include for command line script:
 
 `-d or --data (Required):` Path to multiplex RData object, built using RandomWalkRestartMH R package. This multiplex network contains a delta value indicating the probability of staying in a given network layer or jumping between layers (example multiplex network uses delta = 0.5).
