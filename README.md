@@ -7,10 +7,10 @@ Geneset Refinement using Interacting Networks
 A command line script to filter gene sets using biological networks. This tool builds off of the [RandomWalkRestartMH](https://github.com/alberto-valdeolivas/RandomWalkRestartMH) R package, and can be combined with the [RWRtoolkit](https://github.com/dkainer/RWRtools) R package using the [RWR_make_multiplex.R](https://github.com/dkainer/RWRtools/packageAttempt1/R/RWR_make_multiplex.R) function to build a user-defined multiplex network.
 
 ## Installation using Conda (Conda version 4.11.0)
-1. Verify Conda version (version 4.11.0).
+1. Verify Conda version (version 4.12.0).
   ```
   (base) $ conda -V
-  conda 4.11.0
+  conda 4.12.0
   ```
   
   If conda version is not updated, update conda:
