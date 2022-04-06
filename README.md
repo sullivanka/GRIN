@@ -42,6 +42,7 @@ Installation test complete.
 1. Ensure your input files are in 2 tab-separated columns. The first column corresponds to the user-defined gene set name, and the second column corresponds to the gene ID for the gene of interest. NOTE: this gene ID MUST match the gene IDs used in the multiplex network. See example file in `test/TestGenes.txt`.
 2. Activate GRIN conda environment using `conda activate GRIN` as described above.
 3. Use pre-assembled multiplex network RData object (example multiplex is `test/suicide_weighted_Multiplex_0.5Delta.RData`) and command line parameters to identify which genes are retained or removed by GRIN.
+
 Example command line arguments:
 ` (GRIN) $ Rscript $GRIN_DIR/R/GRIN.R -d $GRIN_DIR/test/suicide_weighted_Multiplex_0.5Delta.RData -g $GRIN_DIR/test/TestGenes.txt -r 0.7 -m Test_Install_User --tau 1,1,1,1,1,1,1,1,1,1 -o $GRIN_DIR/test/test_output `
 4. Flags to include for command line script:
