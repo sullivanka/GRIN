@@ -20,7 +20,7 @@ To use our implementation of GRIN you need to preform a few steps:
 2. Generate a multiplex network that captures biological relationships between genes
 3. Run GRIN using the inputs from (1) and (2) 
 
-For step (2), the multiplex network can be as produced from just a single network layer, such as co-expression edges. However, the more lines of evidence used in your network, the better the outcomes of GRIN. The **RWR_make_multiplex.R** command in the [RWRtoolkit](https://github.com/dkainer/RWRtoolkit) R package is the method to take one or more functional networks and turn them into a multiplex network containing multiple lines of evidence. The multiplex network will be saved in the form of an RData object file, which you then use as an input to GRIN. Comand line instructions are [here](https://github.com/sullivanka/GRIN#running-grin)
+For step (2), the multiplex network can be as produced from just a single network layer, such as co-expression edges. However, the more lines of evidence used in your network, the better the outcomes of GRIN. The **RWR_make_multiplex.R** command in the [RWRtoolkit](https://github.com/dkainer/RWRtoolkit) R package is the method to take one or more functional networks and turn them into a multiplex network containing multiple lines of evidence. The multiplex network will be saved in the form of an RData object file, which you then use as an input to GRIN. Comand line instructions are [here](https://github.com/sullivanka/GRIN#running-grin).
 
 
 
