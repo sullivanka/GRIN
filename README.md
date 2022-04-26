@@ -1,7 +1,10 @@
 # GRIN
 Geneset Refinement using Interacting Networks
 
+
 A command line script to filter gene sets using biological networks. This tool builds off of the [RandomWalkRestartMH](https://github.com/alberto-valdeolivas/RandomWalkRestartMH) R package, and can be combined with the [RWRtoolkit](https://github.com/dkainer/RWRtoolkit) R package using the [RWR_make_multiplex.R](https://github.com/dkainer/RWRtoolkit/R/RWR_make_multiplex.R) function to build a user-defined multiplex network.
+
+To understand more about GRIN and how we validated this tool, check our preprint on medRxiv located [here](https://www.medrxiv.org/content/10.1101/2022.04.20.22273895v1).
 
 #### Developed by:
 * David Kainer (@github/dkainer)
