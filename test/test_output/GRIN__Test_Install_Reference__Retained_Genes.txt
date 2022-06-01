@@ -1,3 +1,3 @@
-setid	left_out	rank	weight	set
+setid	gene_symbol	rank	weight	set
 Related	ENSG00000073756	11522	1	Retained
 Related	ENSG00000056586	14568	1	Retained
