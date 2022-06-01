@@ -27,7 +27,7 @@ For step (2), the multiplex network can be as produced from just a single networ
 
 
 
-## Installation using Conda (Conda version 4.11.0)
+## Installation using Conda (Conda version 4.12.0)
 1. Verify Conda version (version 4.12.0).
   ```
   (base) $ conda -V
@@ -40,10 +40,15 @@ For step (2), the multiplex network can be as produced from just a single networ
 1. Clone GRIN:
     `git clone https://github.com/sullivanka/GRIN.git`
 2. Install the conda env (~5 mins):
-    `(base) $ conda create --name GRIN --channel conda-forge r-base=4.0.2 r-devtools r-doparallel r-essentials r-igraph r-optparse r-signal git-lfs`
-3. Activate conda environment:
+    `(base) $ conda create --name GRIN --channel conda-forge r-base=4.0.2 r-devtools r-doparallel r-essentials r-igraph r-optparse r-signal`
+3. Install Git LFS (~1 min):
+    `(base) $ git lfs install`
+    For more information on Git LFS, see `https://git-lfs.github.com/`.
+4. Activate conda environment:
+    `(base) $ conda create --name GRIN --channel conda-forge r-base=4.0.2 r-devtools r-doparallel r-essentials r-igraph r-optparse r-signal`
+5. Activate conda environment:
     `(base) $ conda activate GRIN`
-4. Activate R and install additional packages. If prompted update all packages as necessary. Note that this process will take some time (~20 mins) from a clean environment.
+6. Activate R and install additional packages. If prompted update all packages as necessary. Note that this process will take some time (~20 mins) from a clean environment.
     ```
     (GRIN) $ R
     > library(devtools)
