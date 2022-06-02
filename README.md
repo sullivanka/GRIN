@@ -45,10 +45,8 @@ For step (2), the multiplex network can be as produced from just a single networ
     `(base) $ git lfs install`
     For more information on Git LFS, see `https://git-lfs.github.com/`.
 4. Activate conda environment:
-    `(base) $ conda create --name GRIN --channel conda-forge r-base=4.0.2 r-devtools r-doparallel r-essentials r-igraph r-optparse r-signal`
-5. Activate conda environment:
     `(base) $ conda activate GRIN`
-6. Activate R and install additional packages. If prompted update all packages as necessary. Note that this process will take some time (~20 mins) from a clean environment.
+5. Activate R and install additional packages. If prompted update all packages as necessary. Note that this process will take some time (~20 mins) from a clean environment.
     ```
     (GRIN) $ R
     > library(devtools)
