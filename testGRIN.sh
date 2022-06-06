@@ -12,7 +12,7 @@ diff $GRIN_DIR/test/test_output/GRIN__Test_Install_User__Removed_Genes.txt $GRIN
 cat output1.txt output2.txt > output.txt
 
 # If output from diff is not blank, then installation is not correct
-correct=$(awk 'END{print NR}' output.txt)
+correct=$(grep -e "$" -c output.txt)
 
 if [ "$correct" == "0" ]; then
 	echo "GRIN Installation successful!"
@@ -21,5 +21,4 @@ if [ "$correct" == "0" ]; then
 	echo "Installation test complete."
 else
 	echo "ERROR: improper output. Ensure that no files were moved following download and that conda installation is correct before reattempting GRIN."
-	rm output1.txt output2.txt output.txt test/test_output/GRIN__Test_Install_User__Retained_Genes.txt test/test_output/GRIN__Test_Install_User__Removed_Genes.txt
 fi

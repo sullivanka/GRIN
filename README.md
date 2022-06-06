@@ -17,9 +17,12 @@ A command line script to filter gene sets using biological networks. This tool b
     `git clone https://github.com/sullivanka/GRIN.git`
 2. Install the conda env (~5 mins):
     `(base) $ conda create --name GRIN --channel conda-forge r-base=4.0.2 r-devtools r-doparallel r-essentials r-igraph r-optparse r-signal`
-3. Activate conda environment:
+3. Install Git LFS (~1 min):
+    `(base) $ git lfs install`  
+    For more information on Git LFS, see `https://git-lfs.github.com/`.
+4. Activate conda environment:
     `(base) $ conda activate GRIN`
-4. Activate R and install additional packages. If prompted update all packages as necessary. Note that this process will take some time (~20 mins) from a clean environment.
+5. Activate R and install additional packages. If prompted update all packages as necessary. Note that this process will take some time (~20 mins) from a clean environment.
     ```
     (GRIN) $ R
     > library(devtools)
@@ -31,10 +34,6 @@ A command line script to filter gene sets using biological networks. This tool b
   `(base) $ conda activate GRIN`
 2. Run `testGRIN.sh`:
   `(GRIN) $ bash testGRIN.sh`
-  NOTE: If running on a non-Linux system, you will need to ensure `gawk` is installed at the command line.  
-  Mac users: Install `gawk` by installing [Homebrew](https://brew.sh/), followed by  
-  ` $ brew install gawk`  
-  Windows users: Install [Gawk for Windows](http://gnuwin32.sourceforge.net/packages/gawk.htm)  
 3. Upon successful running of GRIN, the test script will run GRIN followed by the following output printed to console:
 ```
 GRIN Installation successful!
