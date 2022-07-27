@@ -15,6 +15,25 @@ A command line script to filter gene sets using biological networks. This tool b
 
 1. Clone GRIN:
     `git clone https://github.com/sullivanka/GRIN.git`
+
+    Node: If you receive the following error message upon cloning, you do not have git-lfs installed. Please `rm -rf` the repository and 
+    re-clone after [installing git-lfs](https://git-lfs.github.com/)  to download the repository with its associated Rdata objects, please install git-lfs.
+    ```
+      Cloning into 'GRIN'...
+      remote: Enumerating objects: 112, done.
+      remote: Counting objects: 100% (112/112), done.
+      remote: Compressing objects: 100% (87/87), done.
+      remote: Total 112 (delta 58), reused 57 (delta 23), pack-reused 0
+      Receiving objects: 100% (112/112), 43.94 KiB | 401.00 KiB/s, done.
+      Resolving deltas: 100% (58/58), done.
+      git-lfs filter-process: git-lfs: command not found
+      fatal: the remote end hung up unexpectedly
+      warning: Clone succeeded, but checkout failed.
+      You can inspect what was checked out with 'git status'
+      and retry with 'git restore --source=HEAD :/'
+    ```
+    
+
 2. Install the conda env (~5 mins):
     `(base) $ conda create --name GRIN --channel conda-forge r-base=4.0.2 r-devtools r-doparallel r-essentials r-igraph r-optparse r-signal`
 3. Install Git LFS (~1 min):
