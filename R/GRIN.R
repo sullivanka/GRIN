@@ -355,9 +355,9 @@ main <- function() {
   
   # Load gene set
   geneset.orig <- load_geneset(opt$geneset, nw.mpo, opt)
+  ngenes <- nrow(geneset.orig)
   
   # Remove any duplicate genes in the geneset
-  ngenes <- nrow(geneset.orig)
   geneset <- geneset.orig %>% dplyr::distinct(gene, .keep_all=T)
   # If duplicate genes exist, write to file and remove from input for RWR
   if (nrow(geneset) < ngenes) {
@@ -373,14 +373,14 @@ main <- function() {
   }
   
   # Remove any genes not in the multiplex
-  geneset <- geneset.orig %>% dplyr::filter(gene %in% nw.mpo$Pool_of_Nodes)
+  geneset <- geneset %>% dplyr::filter(gene %in% nw.mpo$Pool_of_Nodes)
   
   not_in_multiplex <- NULL
+  
   # If genes not in multiplex, print genes not in multiplex and write to file
-  if(nrow(geneset.orig) < ngenes) {
+  if(nrow(geneset) < ngenes) {
     message(sprintf('Only %s genes are present in the multiplex', nrow(geneset)))
-    not_in_multiplex <- geneset %>%
-      dplyr::slice(which(!geneset$gene %in% nw.mpo$Pool_of_Nodes))
+    not_in_multiplex <- dplyr::slice(geneset.orig, which(!gene %in% nw.mpo$Pool_of_Nodes))
     message(sprintf('%s genes were not found in multiplex:',nrow(not_in_multiplex)))
     message('WARNING: missing genes can affect results. Consider whether to drop genes from gene list or adjust multiplex network layers accordingly.')
     print(not_in_multiplex)
