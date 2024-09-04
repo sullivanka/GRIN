@@ -1,6 +1,6 @@
 Package: GRIN
 Title: Gene set Refinement through Interacting Networks
-Version: 0.1.0.0
+Version: 1.0.0.0
 Authors@R:
     c(person(given = "Kyle",
            family = "Sullivan",
@@ -10,23 +10,29 @@ Authors@R:
     person(given = "David",
            family = "Kainer",
            role = c("aut", "cre"),
-           email = "david.kainer@ornl.gov",
+           email = "d.kainer@uq.edu.au",
            comment = c(ORCID = "0000-0001-7271-4676")),
     person(given = "Mikaela",
            family = "Cashman McDevitt",
            role = c("aut"),
-           email = "cashmanmm@ornl.gov",
+           email = "mcashman@lbl.gov",
            comment = c(ORCID = "0000-0003-0620-7830")),
     person(given = "John",
            family = "Miller",
            role = c("aut"),
-           email = "millerji@ornl.gov",
+           email = "izaakmiller@gmail.com",
            comment = c(ORCID = "0000-0002-6114-5401")),
     person(given = "Matthew",
            family = "Lane",
            role = c("aut"),
            email = "lanemj@ornl.gov",
-           comment = c(ORCID = "0000-0002-7750-6822")))
+           comment = c(ORCID = "0000-0002-7750-6822")),
+    person(given = "Daniel",
+           family = "Jacobson",
+           role = c("aut"),
+           email = "jacobsonda@ornl.gov",
+           comment = c(ORCID = "0000-0002-9822-8251")))
+
 Description: GRIN is a command line tool that utilizes network topology to filter gene sets. 
 License: GPL (>= 3)
 Encoding: UTF-8
